@@ -3,4 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!
   include CanCan::ControllerAdditions
+
+  #Remove this line 
+  skip_before_filter :verify_authenticity_token
 end
